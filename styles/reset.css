@@ -1,0 +1,54 @@
+/* Reset básico para HTML */
+
+/* Establecer márgenes y rellenos en todos los elementos */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Corregir estilos de listas y botones en IE/Edge */
+button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background: none;
+    color: inherit;
+}
+
+/* Corregir el estilo de los elementos de formulario en Safari */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
+input::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* Corregir estilos de botones en Safari */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Restablecer estilo para los elementos ocultos */
+[hidden] {
+    display: none;
+}
