@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>My web site</title>
 </head>
-<body>
+<body onload="clearFields()">
     <header class="block display_none" >
         
         
@@ -43,7 +43,7 @@
                 <h3>Javascript</h3>
                 <img src="./assets/js.png" alt="image not found">
             </div>
-            <div id="cardContainer">
+            <div >
                 <h3>CSS</h3>
                 <img src="./assets/css.png" alt="image not found">
             </div>
@@ -54,12 +54,14 @@
             
         </section>
 
+        
+
         <section>
             <form action="">
-                <input type="text" id="titleInput" placeholder="Nombre de la actividad">
-                <textarea name="" id="descriptionInput" cols="30" rows="10" placeholder="text area"></textarea>
-                <input type="text" id="urlInput" placeholder="input">
-                <button type="submit" id="addActivity">Boton</button>
+                <input type="text" id="title" placeholder="Nombre de la actividad">
+                <textarea name="" id="description" cols="30" rows="10" placeholder="text area"></textarea>
+                <input type="text" id="imgUrl" placeholder="input">
+                <button type="submit" id="submitButton">Boton</button>
             </form>
 
             <template id="cardTemplate">
@@ -72,6 +74,8 @@
                 </article>
               </template>
 
+              <div id="cardsContainer"></div> 
+
         </section>
     </main>
     <footer></footer>
@@ -79,6 +83,14 @@
     <script src="./scripts/index.js">
 
     </script>
+
+<script>
+    function clearFields() {
+        document.getElementById('title').value = '';
+        document.getElementById('description').value = '';
+        document.getElementById('imgUrl').value = '';
+    }
+</script>
     
 </body>
 </html>
