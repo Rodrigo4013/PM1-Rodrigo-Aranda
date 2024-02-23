@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Document</title>
+    <title>My web site</title>
 </head>
 <body>
-    <header >
+    <header class="block display_none" >
         
         
         <div>
@@ -22,18 +22,18 @@
         <nav>
 
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li href="#about">Home</li>
+                <li href="#teach">About</li>
+                <li href="#activities">Contact</li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section id="about" class="display_none">
             <h2>Conoce mas sobre mi</h2>
             <article>
                 <p>
-                    ...
+                    Mi nombre es Rodrigo Aranda soy ingeniero en electronica, con 5 años de experiencia en el sector automotriz, atualmente estoy estudiando en Henry para trabajar en lo que realmente me apasiona que es la programacion.
                 </p>
                 </article>
         </section>
@@ -43,7 +43,7 @@
                 <h3>Javascript</h3>
                 <img src="./assets/js.png" alt="image not found">
             </div>
-            <div>
+            <div id="cardContainer">
                 <h3>CSS</h3>
                 <img src="./assets/css.png" alt="image not found">
             </div>
@@ -56,11 +56,21 @@
 
         <section>
             <form action="">
-                <input type="text" placeholder="Nombre de la actividad">
-                <textarea name="" id="" cols="30" rows="10" placeholder="text area"></textarea>
-                <input type="text" placeholder="input">
-                <button type="submit">Boton</button>
+                <input type="text" id="titleInput" placeholder="Nombre de la actividad">
+                <textarea name="" id="descriptionInput" cols="30" rows="10" placeholder="text area"></textarea>
+                <input type="text" id="urlInput" placeholder="input">
+                <button type="submit" id="addActivity">Boton</button>
             </form>
+
+            <template id="cardTemplate">
+                <!-- item -->
+                <article class="card_item">
+                  <img class="card_img" alt="" />
+                  <h3 class="title"></h3>
+                  <p class="description"></p>
+                  <button class="btn">Delete</button>
+                </article>
+              </template>
 
         </section>
     </main>
